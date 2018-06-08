@@ -1,0 +1,88 @@
+<mat-card class="childcontainer">
+    <div class="pageheight">
+      <mat-card class="headercontent">
+        Search Nominee By Id
+  
+      </mat-card>
+  
+      <div *ngIf="statusCode === 404" [ngClass]="'error'">
+        No records are found.
+      </div>
+      <div *ngIf="statusCode === 400" [ngClass]="'error'">
+        Please select the values.
+      </div>
+      <div *ngIf="statusCode === 401" [ngClass]="'error'">
+        Your Organisation is not active.Please check with your Organisation.
+      </div>
+  
+      <form [formGroup]="empForm" (ngSubmit)="nomineeIdSearch(empForm.value)">
+        <table class="searchemptable">
+          <tr>
+            <td>
+              <mat-form-field class="empForm-full-width">
+                <input required matInput formControlName="nominationId" placeholder="Nomination Id ">
+              </mat-form-field>
+            </td>
+          </tr>
+          <div ng-messages="nominations.nominationId.$error" ng-if='nominations.nominationId.$dirty'>
+          </div>
+  
+  
+          <tr>
+            <div>
+              <button class="searchbutton" [disabled]="!empForm.valid" mat-raised-button>Search</button>
+              <button class="cancelbutton" mat-raised-button (click)="cancel()">Cancel</button>
+            </div>
+        </table>
+  
+      </form>
+      <br/>
+  
+      
+  
+    </div>
+  
+  </mat-card>
+  
+  <mat-spinner *ngIf="showLoader"></mat-spinner>
+  
+  <div>
+        <font color="black">
+          
+          <p> Nomination Id ={{nominations.nominationId}}</p>
+          <p> Nomination Description ={{nominations.nominationDescription}}</p>
+          <p> Nomination Type={{nominations.nominationType}}</p>
+          <p> Nomination Value={{nominations.nominationValue}}</p>
+          <p>Nomination End Date ={{nominations.nominationEndDate}}</p>
+         
+        </font>
+       
+    
+  </div>
+  
+  <!--<table *ngIf="allEmployees ?.length > 0">
+   
+    <tr style="color:blue;font-weight: bold;">
+  Total {{searchrole}} Employees = {{totalEmployees}}
+    </tr>
+  </table>
+   <mat-card >
+     
+      <mat-card-content>
+    
+   <mat-grid-list class="responsive"  cols="1" rowHeight="2:1">      
+  
+          <mat-grid-tile  class="emp-list" *ngFor="let employee of allEmployees | paginate: { itemsPerPage: 50, currentPage: p }"   >
+             <a [routerLink]="['../viewemployee',employee.mappingId]">
+             
+               <font color="white">   
+              <p>{{employee.employeeName}}</p>
+              </font>
+               </a>
+            
+          </mat-grid-tile>
+            
+        </mat-grid-list> 
+   <pagination-controls *ngIf="allEmployees ?.length > 0" (pageChange)="p = $event"></pagination-controls>
+   </mat-card-content>
+    </mat-card> -->

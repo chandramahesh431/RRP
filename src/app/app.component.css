@@ -1,0 +1,98 @@
+/* .navbar .nav > li > a {
+    line-height: 10px;
+  }
+  .square1 {
+    width: 254px;
+height: 129px;
+border: 1px solid #000;
+position: relative;
+left: 547px;
+top: 42px;
+    
+  }
+
+  .square2 {
+    width: 219px;
+    height: 100px;
+    border: 1px solid #000;
+    position: relative;
+    left: 769px;
+    top: -453px;
+}
+    
+  
+
+  .square3 {
+    width: 219px;
+    height: 100px;
+    border: 1px solid #000;
+    position: relative;
+    left: 326px;
+top: -350px;
+    
+  }
+  .square4 {
+    width: 254px;
+height: 129px;
+border: 1px solid #000;
+position: relative;
+left: 547px;
+top: 42px;
+    
+  } 
+
+  a {
+    color:black;
+ position: relative;
+top: 16px;
+left: 39px;
+}
+ 
+
+.arrow{
+    position: relative;
+top: 7px;
+left: -28px;
+}
+    
+.image
+{
+    width: 504px;
+height: 589px;
+position: relative;
+
+left: 412px;
+}
+
+
+
+.mat-icon {
+    background-repeat: no-repeat;
+    display: inline-block;
+    fill: currentColor;
+    height: 14px;
+    width: 14px;
+    position: relative;
+top: -1px;
+left: -222px;
+top: 32px;
+}
+
+
+.mattab {
+    
+        font-size: 20px;
+    font-weight: 500;
+}
+
+.tabs
+{
+    position:absolute; 
+    top: 10px;
+}
+
+.img {
+    vertical-align: middle;
+    position:fixed;
+    top: -4px;
+} */

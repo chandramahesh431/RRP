@@ -1,0 +1,19 @@
+
+
+<mat-card [style.background]= "orgbcolor" class="childcontainer"> 
+    <div class="pageheight">
+    <h2 class="header"> </h2>
+    
+    
+      <span><a routerLink="createnominations" routerLinkActive="active">
+       <button class="buttonStyle" mat-raised-button > <mat-icon>add</mat-icon>Create Nominee </button>
+      </a> </span>
+      <span>
+    <a routerLink="searchnominations" routerLinkActive="active">
+       <button class="buttonStyle" mat-raised-button > <mat-icon>search</mat-icon>Search Nominee </button>
+      </a>
+      </span>
+      <router-outlet></router-outlet>
+     
+    </div>
+  </mat-card>

@@ -1,0 +1,49 @@
+
+.numbers {
+    font-family: Arial;
+}
+  
+.content {
+ 
+ /*  width: 100px; 
+ float: left;
+ display: inline-table; */
+ margin: 5px;
+ float: none; align-content: center;
+
+   position: relative; 
+   display: inline-table; flex-wrap: auto;
+   color: white;
+background-color: green;
+}
+
+.error{
+   color: red;
+   font-size: 16px;
+}
+
+.searchemptable{
+
+border-collapse:separate;
+  padding-top: 20px;
+} 
+
+.header{
+    font:  bold 15px/30px Georgia, serif;
+   color: blue;
+}
+
+.searchbutton{
+   color: green;
+    font-weight: bold;
+}
+
+.cancelbutton{
+   color: red;
+    font-weight: bold;
+}
+
+
+
+
+

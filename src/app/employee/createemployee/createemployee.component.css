@@ -1,0 +1,40 @@
+.empForm-full-width {
+  
+    width: 100%;
+}
+
+.error{
+    color: red;
+    font-size: 16px;
+}
+.emptable{
+ 
+  width: 100%;
+}  
+
+ .mat-form-field-placeholder { padding: 5px; 
+  color: green;
+ }
+
+.header{
+     font:  bold 15px/30px Georgia, serif;
+    color: blue;
+}
+.savebutton{
+    color: green;
+     font-weight: bold;
+}
+
+.cancelbutton{
+    color: red;
+     font-weight: bold;
+}
+
+.tableheader {
+  
+} 
+
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+    border-color: #ff4081;
+   
+}

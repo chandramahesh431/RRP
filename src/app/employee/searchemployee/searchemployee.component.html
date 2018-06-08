@@ -1,0 +1,84 @@
+<mat-card class="childcontainer">
+    <div class="pageheight">
+      <mat-card class="headercontent">
+        Search Employee By ID
+  
+      </mat-card>
+  
+      <div *ngIf="statusCode === 404" [ngClass]="'error'">
+        No records are found.
+      </div>
+      <div *ngIf="statusCode === 400" [ngClass]="'error'">
+        Please select the values.
+      </div>
+      <div *ngIf="statusCode === 401" [ngClass]="'error'">
+        Your Organisation is not active.Please check with your Organisation.
+      </div>
+  
+      <form [formGroup]="empForm" (ngSubmit)="employeeIdSearch(empForm.value)">
+        <table class="searchemptable">
+          <tr>
+            <td>
+              <mat-form-field class="empForm-full-width">
+                <input required matInput formControlName="employeeId" placeholder="Employee Id ">
+              </mat-form-field>
+            </td>
+          </tr>
+          <div ng-messages="employee.employeeId.$error" ng-if='employee.employeeId.$dirty'>
+          </div>
+  
+  
+          <tr>
+            <div>
+              <button class="searchbutton" [disabled]="!empForm.valid" mat-raised-button>Search</button>
+              <button class="cancelbutton" mat-raised-button (click)="cancel()">Cancel</button>
+            </div>
+        </table>
+  
+      </form>
+      <br/>
+  
+      
+  
+    </div>
+  
+  </mat-card>
+  <mat-spinner *ngIf="showLoader"></mat-spinner>
+  <div layout-wrap>
+  
+    
+        <font color="black">
+          <p> Employee id ={{employee.employeeId}}</p>
+          <p> Employee Name={{employee.employeeName}}</p>
+          <p> Employee EmailId = {{employee.emailId}}</p>
+          <p> Employee Department ={{employee.department}}</p>
+          <p> Employee Project ={{employee.project}}</p>
+         
+        </font>
+       
+    
+  </div>
+  
+  <!--<table *ngIf="allEmployees ?.length > 0">
+   
+    <tr style="color:blue;font-weight: bold;">
+  Total {{searchrole}} Employees = {{totalEmployees}}
+    </tr>
+  </table>
+   <mat-card >
+     
+      <mat-card-content>
+    
+   <mat-grid-list class="responsive"  cols="1" rowHeight="2:1">      
+  
+          <mat-grid-tile  class="emp-list" *ngFor="let employee of allEmployees }"   >
+            
+               <font color="white">   
+              <p>{{employee.employeeName}}</p>
+              </font>
+              
+          </mat-grid-tile>
+            
+        </mat-grid-list> 
+     </mat-card-content>
+    </mat-card> -->

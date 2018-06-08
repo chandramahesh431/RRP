@@ -1,0 +1,11 @@
+<p style class="para">Hello Pallavi</p>
+
+
+<form action="/" (ngSubmit)="onSubmit()">
+  <!-- <input style="visibility:hidden;" style class="browse" [(ngModel)]="register.file"  type="file" name="pic" accept="*.*"> -->
+  <input type="file" (change)="fileChange($event)" placeholder="Upload file" accept="*.*">
+
+  <!-- <input type='file' accept='text/plain' multiple (change)='openFile($event)' accept="*.*"> -->
+
+  <input  style class="submit" value="Submit" type="Submit">
+</form> 

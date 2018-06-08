@@ -1,0 +1,39 @@
+.para
+{
+    position: relative;
+    top: 5px;
+    left: 37%;
+    font-size: 32px;}
+
+    .submit
+    {
+        
+
+            padding: 0px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-bottom: 26;
+            position: relative;
+            /* top: -100px; */
+            left: -1px;
+            width: 86px;
+    }
+ .browse
+    {
+           padding: 48px -79px;
+           text-align: center;
+           text-decoration: none;
+           display: inline-block;
+           font-size: 16px;
+           display: inherit;
+           margin-bottom: 118px;
+           width:280px;
+           height: 32px;
+           padding-left: -8px;
+           border-radius: inherit;
+    
+
+
+    }

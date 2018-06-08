@@ -1,0 +1,70 @@
+<mat-card class="container">
+    <h2 class="header">Fill New Employee Form</h2>
+  
+    <div *ngIf="statusCode === 200" [ngClass]="'success'">
+      Created successfully.
+    </div>
+    <div *ngIf="statusCode === 401" [ngClass]="'error'">
+      Your Organisation is not active.Please check with your Organisation.
+    </div>
+  
+    <!--  <div *ngIf="statusCode === 204" [ngClass] = "'success'">
+          Cubicle deleted successfully.
+     </div>  -->
+    <div *ngIf="statusCode === 404" [ngClass]="'error'">
+      Internal Server Error.
+    </div>
+    <div *ngIf="statusCode === 0" [ngClass]="'error'">
+      Internal Server Error.
+    </div>
+  
+  
+  
+  
+  
+    <div>
+      <form [formGroup]="empForm" (ngSubmit)="onEmpFormSubmit()">
+        <table class="emptable">
+  
+  
+  
+          <tr>
+            <td>
+              <mat-form-field class="empForm-full-width">
+                <input required [(ngModel)]="login.username" matInput formControlName="username" placeholder="Username">
+  
+  
+              </mat-form-field>
+            </td>
+          </tr>
+  
+          <tr>
+            <td>
+              <mat-form-field class="empForm-full-width">
+                <input required [(ngModel)]="login.password" matInput formControlName="password" placeholder="Password ">
+              </mat-form-field>
+            </td>
+          </tr>
+          
+  
+          
+  
+          
+  
+          
+  
+  
+  
+          <div>
+            <button class="submit" [disabled]="!empForm.valid"  (click)="submit" mat-raised-button>Submit</button>
+  
+            
+          </div>
+  
+        </table>
+      </form>
+      <br/>
+  
+  
+    </div>
+  </mat-card>

@@ -1,0 +1,106 @@
+<mat-card class="childcontainer">
+    <h2 class="header">Fill New Employee Form</h2>
+  
+    <div *ngIf="statusCode === 200" [ngClass]="'success'">
+      Created successfully.
+    </div>
+    <div *ngIf="statusCode === 401" [ngClass]="'error'">
+      Your Organisation is not active.Please check with your Organisation.
+    </div>
+  
+    <!--  <div *ngIf="statusCode === 204" [ngClass] = "'success'">
+          Cubicle deleted successfully.
+     </div>  -->
+    <div *ngIf="statusCode === 404" [ngClass]="'error'">
+      Internal Server Error.
+    </div>
+    <div *ngIf="statusCode === 0" [ngClass]="'error'">
+      Internal Server Error.
+    </div>
+  
+  
+  
+  
+  
+    <div>
+      <form [formGroup]="empForm" (ngSubmit)="onEmpFormSubmit()">
+        <table class="emptable">
+  
+          <tr>
+            <td>
+              <!-- <mat-form-field class="empForm-full-width">
+                <input required [(ngModel)]="programs.programDescription" matInput formControlName="programDescription" placeholder="Program Description ">
+              </mat-form-field>
+   -->
+   <mat-form-field class="empForm-full-width">
+      <textarea required [(ngModel)]="programs.programDescription" matInput formControlName="programDescription" placeholder="Program Description "></textarea>
+    </mat-form-field>
+  
+            </td>
+          </tr>
+  
+  
+          <tr>
+            <td>
+          <mat-form-field class="empForm-full-width">
+            <mat-select required selected  formControlName="programDuration" placeholder="Program Duration">
+              <mat-option ng-selected="programduration.id" *ngFor ="let programduration of programdurations" [value]="programduration.id">{{programduration.name}} </mat-option>
+              
+            </mat-select>
+          </mat-form-field>
+        </td>
+      </tr>
+  
+  
+    <tr>
+          <td>
+        <mat-form-field class="empForm-full-width">
+          <mat-select required selected  formControlName="month" placeholder="MONTH">
+            <mat-option ng-selected="programmonth.id" *ngFor ="let programmonth of programmonths" [value]="programmonth.name">{{programmonth.name}}</mat-option>
+            
+          </mat-select>
+        </mat-form-field>
+      </td>
+    </tr>
+
+  
+  
+  
+      <!-- <tr>
+        <td>
+          <mat-form-field class="empForm-full-width">
+               <mat-select [(ngModel)]="programs.month" matselect formControlName="month"   placeholder="MONTH" >
+              <mat-option value="JANUARY">JANUARY</mat-option> 
+                <mat-option value="FEBRUARY">FEBRUARY</mat-option>
+                <mat-option value="MARCH">MARCH</mat-option>
+                <mat-option value="APRIL">APRIL</mat-option>
+                <mat-option value="MAY">MAY</mat-option> 
+                  <mat-option value="JUNE">JUNE</mat-option>
+                  <mat-option value="JULY">JULY</mat-option>
+                  <mat-option value="AUGUST">AUGUST</mat-option>
+                  <mat-option value="SEPTEMBER">SEPTEMBER</mat-option> 
+                    <mat-option value="OCTOBER">OCTOBER</mat-option>
+                    <mat-option value="NOVEMBER">NOVEMBER</mat-option>
+                    <mat-option value="DECEMBER">DECEMBER</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+      </tr> -->
+  
+  
+  
+          <div>
+            <button class="savebutton" [disabled]="!empForm.valid"  mat-raised-button>Save</button>
+  
+            <button class="savebutton" mat-raised-button type="reset">Reset</button>
+  
+            <button class="cancelbutton" mat-raised-button (click)="cancel()">Cancel</button>
+          </div>
+  
+        </table>
+      </form>
+      <br/>
+  
+  
+    </div>
+  </mat-card>
