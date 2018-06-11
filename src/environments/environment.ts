@@ -15,6 +15,7 @@ export const environment = {
 
   ldapUrl: 'http://192.168.200.73:3001/auth/ldap',
   walletUrl: 'http://192.168.200.73:3001/api/wallet/import',
+  queryUrl: 'http://192.168.200.73:3001/api/queries/GetAllCreatedPrograms',
 
 
 

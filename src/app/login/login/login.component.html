@@ -1,70 +1,57 @@
-<mat-card class="container">
-    <h2 class="header">Fill New Employee Form</h2>
-  
-    <div *ngIf="statusCode === 200" [ngClass]="'success'">
-      Created successfully.
-    </div>
-    <div *ngIf="statusCode === 401" [ngClass]="'error'">
-      Your Organisation is not active.Please check with your Organisation.
-    </div>
-  
-    <!--  <div *ngIf="statusCode === 204" [ngClass] = "'success'">
-          Cubicle deleted successfully.
-     </div>  -->
-    <div *ngIf="statusCode === 404" [ngClass]="'error'">
-      Internal Server Error.
-    </div>
-    <div *ngIf="statusCode === 0" [ngClass]="'error'">
-      Internal Server Error.
-    </div>
-  
-  
-  
-  
-  
-    <div>
-      <form [formGroup]="empForm" (ngSubmit)="onEmpFormSubmit()">
-        <table class="emptable">
-  
-  
-  
-          <tr>
-            <td>
-              <mat-form-field class="empForm-full-width">
-                <input required [(ngModel)]="login.username" matInput formControlName="username" placeholder="Username">
-  
-  
-              </mat-form-field>
-            </td>
-          </tr>
-  
-          <tr>
-            <td>
-              <mat-form-field class="empForm-full-width">
-                <input required [(ngModel)]="login.password" matInput formControlName="password" placeholder="Password ">
-              </mat-form-field>
-            </td>
-          </tr>
-          
-  
-          
-  
-          
-  
-          
-  
-  
-  
-          <div>
-            <button class="submit" [disabled]="!empForm.valid"  (click)="submit" mat-raised-button>Submit</button>
-  
+<div class="maincontainer">
+  <!-- <div *ngIf="statusCode === 200" [ngClass]="'success'">
+    Created successfully.
+  </div>
+  <div *ngIf="statusCode === 401" [ngClass]="'error'">
+    Your Organisation is not active.Please check with your Organisation.
+  </div>
+
+   <div *ngIf="statusCode === 204" [ngClass] = "'success'">
+        Cubicle deleted successfully.
+   </div> 
+  <div *ngIf="statusCode === 404" [ngClass]="'error'">
+    Internal Server Error.
+  </div>
+  <div *ngIf="statusCode === 0" [ngClass]="'error'">
+    Internal Server Error.
+  </div> -->
+<div class = "divLeft">
+
+  <img src="../../../assets/img/RRP.PNG" alt="logo"/>
+</div>
+
+  <div class = "divRight">
+    <form [formGroup]="empForm" (ngSubmit)="onEmpFormSubmit()">
+      <table class="emptable">
+        <h2>User Login</h2>
+        <tr>
+          <td>
             
-          </div>
-  
-        </table>
-      </form>
-      <br/>
-  
-  
-    </div>
-  </mat-card>
+            <span style="position: relative;
+            left: 40px;" class="glyphicon glyphicon-user" ></span> 
+            <input required [(ngModel)]="login.username"  formControlName="username"  placeholder="Username" >
+                </td>
+        </tr>
+
+        <tr>
+        
+          <td style ="padding-bottom: 5%">
+              
+              <span  style ="position: relative;
+              left: 40px;"class="glyphicon glyphicon-lock"></span>
+              <input class ="formValue" required [(ngModel)]="login.password"  formControlName="password" placeholder="Password ">
+            
+          </td>
+        </tr>
+        <tr>
+            <td >
+          <button  [disabled]="!empForm.valid"  (click)="submit" >Login</button>
+        </td>
+      </tr>
+          <br>
+        <a (click)="AdminSubmit()">Registration</a>
+      </table>
+    </form>
+    <br/>
+  </div>
+</div>

@@ -12,6 +12,7 @@ import 'rxjs/add/operator/combineLatest';
 import { Registration } from './registration';
 import { environment } from '../../../environments/environment';
 
+
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
@@ -22,12 +23,24 @@ export class RegistrationComponent implements OnInit {
  walleturl : any
  
  register: Registration = new Registration();
-  constructor(private router: Router, private http: Http
-  ) {
+  constructor(private router: Router, private http: Http,private _loginservice:LoginService  ) {
     this.walleturl = environment.walletUrl;
     
     
     console.log(this.register.access_token)
+   }
+
+   queryMethod()
+   {
+this._loginservice.getAllProgramsCreated().subscribe(res=> {
+
+  alert(res.json);
+
+
+});
+
+
+
    }
 
   ngOnInit() {

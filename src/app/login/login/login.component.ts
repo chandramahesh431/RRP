@@ -23,6 +23,7 @@ import {LoginService } from '../../services/login.service';
 export class LoginComponent  {
   login: Login = new Login();
   statusCode: any;
+  access_token:any;
   data: any ;
   constructor(private loginService: LoginService, private router: Router) {
 
@@ -39,39 +40,64 @@ export class LoginComponent  {
   });
 
   onEmpFormSubmit() {
+    LoginService.data=null;
     
-    
-    console.log("onEmpFormSubmit AddNominationsComponent ", this.login);
-   this.loginService.login(this.login)
-   console.log(LoginService.data)
-    // .subscribe(successCode => {
-    //   this.statusCode = successCode;
-       
-    //     console.log("AddNominationsComponent successCode ", successCode);
-        // this.backToCreateArticle();
-        // console.log("test ",successCode)
-        //this.data = LoginService.data
-        
-      //  LoginService.access_token = this.login.username 
-        // if (successCode === 200 || successCode === 201) {
-        //  LoginService.access_token = this.login.access_token 
-        //  console.log("Token"+ this.login.username ) //"QV1YDzdrKrvGBtYEyT7hXWNzj7gHnkNYxSYSx5E5S8Ne0CzPe28XZUesp0yX2ZBD";
-           this.router.navigate(['/home/registration']);
-          
-        // }
-        	
+   
+   this.loginService.login(this.login).subscribe(res=>
+    {
+      
+    this.access_token= res.access_token;         
+    if (res != null)
+    {
+      LoginService.data =  res.access_token;
+      
+    }
+   
+    })
 
-      // },
-        // errorCode => {
-        //   console.log("AddNominationsComponent errorCode ", errorCode);
+  if(this.access_token)
+  {
+     this.router.navigate(['/home/registration']);
 
-        //   this.statusCode = errorCode;
-        //   console.log("AddNominationsComponent statusCode ", this.statusCode);
-          
-        //   //   this.errorHandle();
-        //   //  this.backToCreateArticle();
-        // });
   }
+  else
+  {
+
+    alert("check username/password");
+  }
+
+      
+  }
+
+  login1: Login = new Login();
+AdminSubmit()
+{
+ 
+  LoginService.data=null;
+
+  this.login1.username="administrator";
+  this.login1.password="password";
+
+  if(this.login1.username!=null && this.login1.password!=null)
+  {
+  this.loginService.login(this.login1).subscribe(res=>
+    {
+      
+    this.access_token= res.access_token;         
+    if (res != null)
+    {
+      LoginService.data =  res.access_token;
+      this.router.navigate(['/home/registration']);
+    }
+   
+    })
+  
+}
+
+}
+
+
+
 
   cancel() {
     console.log(" cancel");

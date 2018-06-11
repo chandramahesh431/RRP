@@ -1,0 +1,93 @@
+.maincontainer {
+    /*background-image:url("Images/loginScreen.jpg");*/
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: 0px auto;
+    height: 50%;
+    width: 100%;
+    border-radius: 100px / 5px; 
+    box-shadow:0 0 18px rgba(0,0,0,0.6);
+    display:block;
+}
+  .divLeft {
+    width: 50%;
+    height: 100%;
+     background-repeat: no-repeat;
+     background-position: center;
+     text-align: center;
+     float:left; 
+     padding-top: 10%;
+  }
+ 
+  .divRight {
+    width: 50%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #ffffff;
+    float: right;
+    background-position: center;
+    padding-top: 100px;
+  
+  }
+  h2{
+      left: 100px;
+      padding-bottom: 2%;
+  }
+  button{
+    height: 45px;
+    width: 45%;
+    background-color:#32CD32;
+    border-radius: 30px;
+    border: 0;
+    color: #ffffff;
+    cursor: pointer;
+    text-align: center;
+  }
+  .emptable{
+    
+    width: 95%;
+    border-radius: 30px;
+    text-align: center;
+  }
+  input{
+    height: 45px;
+    width: 45%;
+    border-radius: 30px;
+    background-color: rgba(0,0,0,.12);
+    border: 0;
+    padding-left: 50px;
+   
+  }
+  textarea:focus, input:focus{
+    outline: none;
+    }
+  td{
+    padding-bottom: 2%;
+  }
+.symbols{
+    position: relative;
+    left: 40px;
+}
+
+  /* .inner-addon
+  {position:relative;} */
+    
+    /* style icon
+    .inner-addon.glyphicon {
+      position: absolute;
+      padding: 10px;
+      pointer-events: none;
+    }
+    
+    /* align icon */
+    /* .left-addon .glyphicon{ left:  0px;}
+    .right-addon .glyphicon{ right: 0px;}
+    
+    /* add padding  */
+    /* .left-addon input{ padding-left:30px;}
+    .right-addon input{ padding-right:30px;}  */ 
+    
+  
+  
