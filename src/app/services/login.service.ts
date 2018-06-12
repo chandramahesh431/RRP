@@ -33,7 +33,7 @@ export class LoginService {
 
       let cpHeaders = new Headers({ 'Content-Type': 'application/json' });
       let options = new RequestOptions({ headers: cpHeaders });
-      debugger;
+     
       
       console.log("login", login);
       return this.http.post(this.ldapUrl, login, options).map((res:Response) =>res.json()).catch(this._errorHandler);                
@@ -45,8 +45,7 @@ export class LoginService {
       let cpHeaders = new Headers({ 'Content-Type': 'application/json' });
       cpHeaders.append("X-Access-Token",LoginService.data);
      
-      let options = new RequestOptions({ headers: cpHeaders });
-      debugger;
+      let options = new RequestOptions({ headers: cpHeaders });  
       return this.http.get(this.queryURL,options).map((res:Response) =>res.json()).catch(this._errorHandler);   
     }
 
