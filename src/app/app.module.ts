@@ -38,6 +38,22 @@ export const appRoutes: Routes = [
         path:'login',
         component:LoginComponent
     },
+    {
+      path:'AddHRPersonel',
+      component:AddHRPersonelComponent
+  },
+  {
+    path:'AddProgram',
+    component:AddProgramComponent
+},
+{
+  path:'ApproveProgram',
+  component:ApproveProgramComponent
+},
+{
+  path:'UpdateProgram',
+  component:UpdateProgramComponent
+},
         {
         path:'registration',
         component:RegistrationComponent 
