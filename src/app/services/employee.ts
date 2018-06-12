@@ -9,3 +9,17 @@ export class Employee {
    constructor()  { 
     }
  } 
+
+ export class Personnel {
+
+  public firstname: string;
+  public lastname: string;    
+  public emailId: string;   
+  public department: string;    
+  public designation: string; 
+  public reportingManager:string; 
+  
+constructor()  { 
+ }
+} 
+

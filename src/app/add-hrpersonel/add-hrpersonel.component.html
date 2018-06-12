@@ -1,3 +1,86 @@
-<p>
-  add-hrpersonel works!
-</p>
+<div class="container">
+  <h3 id="divid">HR Personnel</h3>
+  <hr id="line">
+ <div >
+
+  <div class="form-group row" >
+    <div class="col-sm-3" id="detailsid">
+      <label for="firstname">Firstname:</label>
+    </div>
+  <div class="col-sm-3" id="readText">
+    <!--<select (change)="onChange($event)" class="form-control">
+        <option value="" disabled select>Select</option>
+        <option value ="card1">4448-XXXX-XXXX-8743</option>
+    </select>-->
+    <input type="text" [(ngModel)]="personnelV.firstname" id="firstname" name="firstname" class="form-control">
+</div>
+</div>
+
+  <div class="form-group row">
+    <div class="col-sm-3" id="detailsid">
+      <label for="lastname">Lastname:</label>
+    </div>
+    <div class="col-sm-3">
+      <input type="text" [(ngModel)]="personnelV.lastname" id="lastname" name="lastname" class="form-control">
+    </div>
+
+  </div>
+  <div class="form-group row">
+      <div class="col-sm-3" id="detailsid">
+        <label for="department">Department:</label>
+      </div>
+  <div class="col-sm-3">
+      <select id="department" [(ngModel)]="personnelV.department" name="department" class="form-control">       
+          <option disabled select value="HR">HR</option>         
+      </select>
+  </div>
+  </div>
+
+
+  <div class="form-group row">
+    <div class="col-sm-3" id="detailsid">
+      <label for="designation">Designation:</label>
+    </div>
+<div class="col-sm-3">
+    <select id="designation"  [(ngModel)]="personnelV.designation" name="designation"  class="form-control">    
+        <option value="Hr Personnel" disabled select>HR Personel</option>       
+    </select>
+</div>
+</div>
+
+
+<div class="form-group row">
+  <div class="col-sm-3" id="detailsid">
+    <label for="ReportingManager">Reporting Manager:</label>
+  </div>
+<div class="col-sm-3">
+  <select id="ReportingManager" [(ngModel)]="personnelV.reportingManager" name="ReportingManager" (change)="onChange($event)" class="form-control">
+    <option value="" disabled select>Select</option>
+      <option value>M1</option>
+      <option value>M2</option>
+  </select>
+</div>
+</div>
+
+<div class="form-group row">
+  <div class="col-sm-3" id="detailsid">
+    <label for="email">Email:</label>
+  </div>
+<div class="col-sm-3">
+  <input id="email"  name="email" type="text" class="form-control">
+</div>
+</div>
+
+    
+
+    <div class="row form-group">
+      <div class="col-sm-3" id="detailsid"></div>
+      <div class="col-sm-3" style="text-align: right">
+       <button type="button" class="btn btn-primary"  (click)="AddPersonel()" style="background-color: #004165" >Add</button>
+       <button type="button" class="btn btn-primary" (click)="refresh()" style="background-color: #004165 " >Cancel</button>
+        
+  </div>
+</div>
+</div>
+
+</div>

@@ -4,7 +4,7 @@ import { Http, Response, Headers, URLSearchParams, RequestOptions, Request, XHRB
 import { Observable } from 'rxjs';
 import { map, filter, catchError, mergeMap } from 'rxjs/operators';
 import { Router } from '@angular/router'
-import { Employee } from '../services/employee';
+import { Employee,Personnel } from '../services/employee';
 import 'rxjs/Rx';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
@@ -17,9 +17,11 @@ export class EmployeeService {
 
   createEmployeeUrl: string;
   searchEmployeeUrl: string;
+  addPersonalUrl:string;
   constructor(private router: Router, private http: Http) {
     this.createEmployeeUrl = environment.createEmployeeUrl;
     this.searchEmployeeUrl=environment.searchEmployeeUrl;
+    this.addPersonalUrl=environment.addPersonalUrl;
 
   }
 
@@ -34,6 +36,17 @@ createEmployee(employee: Employee): Observable<number> {
           .map(success => success.status)
          // .catch(this.handleError);
   }
+
+  addPersonel(personel: Personnel): any {
+    let cpHeaders = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: cpHeaders });   
+     
+    console.log("add personal", personel);
+    return this.http.post(this.addPersonalUrl, personel, options)
+          .map(success => success.status)
+      
+}
+
 
   searchEmployeeId(employeeId: string): Observable<Employee> {
     let cpHeaders = new Headers({ 'Content-Type': 'application/json' });

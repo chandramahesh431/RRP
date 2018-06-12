@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Personnel } from '../services/employee';
 
 @Component({
   selector: 'app-add-hrpersonel',
@@ -6,10 +7,27 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-hrpersonel.component.css']
 })
 export class AddHRPersonelComponent implements OnInit {
+//personnelV:Personnel=new Personnel();
 
-  constructor() { }
+  constructor() { 
+
+    //this.personnelV.firstname="test";
+  }
 
   ngOnInit() {
   }
 
+  AddPersonel()
+  {
+
+
+debugger;
+
+
+
+
+
+
+
+  }
 }
