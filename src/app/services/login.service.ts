@@ -39,12 +39,15 @@ export class LoginService {
       return this.http.post(this.ldapUrl, login, options).map((res:Response) =>res.json()).catch(this._errorHandler);                
   
     }
+    
     getAllProgramsCreated():any
     {
       let cpHeaders = new Headers({ 'Content-Type': 'application/json' });
+      cpHeaders.append("X-Access-Token",LoginService.data);
+     
       let options = new RequestOptions({ headers: cpHeaders });
       debugger;
-      return this.http.get(this.queryURL, LoginService.data).map((res:Response) =>res.json()).catch(this._errorHandler);   
+      return this.http.get(this.queryURL,options).map((res:Response) =>res.json()).catch(this._errorHandler);   
     }
 
     private _errorHandler(error:Response){

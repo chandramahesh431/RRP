@@ -33,8 +33,9 @@ export class RegistrationComponent implements OnInit {
    queryMethod()
    {
 this._loginservice.getAllProgramsCreated().subscribe(res=> {
-
-  alert(res.json);
+debugger;
+  alert(res);
+  
 
 
 });

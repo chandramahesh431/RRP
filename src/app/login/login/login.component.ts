@@ -45,7 +45,7 @@ export class LoginComponent  {
    
    this.loginService.login(this.login).subscribe(res=>
     {
-      
+      debugger;
     this.access_token= res.access_token;         
     if (res != null)
     {
