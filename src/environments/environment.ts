@@ -4,14 +4,14 @@
 
 export const environment = {
   production: false,
-  createEmployeeUrl: 'http://192.168.200.73:3000/api/com.attra.rrp.employee.Employee',
-  searchEmployeeUrl: 'http://192.168.200.73:3000/api/com.attra.rrp.employee.Employee',
+  createEmployeeUrl: 'http://192.168.200.73:3001/api/com.attra.rrp.employee.Employee',
+  searchEmployeeUrl: 'http://192.168.200.73:3001/api/com.attra.rrp.employee.Employee',
   //searchEmployeeUrl :'http://localhost:8080/RRPDemo/getEmployeeById/',
 
-  createNominationsUrl: 'http://192.168.200.73:3000/api/com.attra.rrp.nomination.Nomination',
-  searchNominationsUrl: 'http://192.168.200.73:3000/api/com.attra.rrp.nomination.Nomination',
+  createNominationsUrl: 'http://192.168.200.73:3001/api/com.attra.rrp.nomination.Nomination',
+  searchNominationsUrl: 'http://192.168.200.73:3001/api/com.attra.rrp.nomination.Nomination',
 
-  createprogramUrl: 'http://192.168.200.73:3000/api/com.attra.rrp.program.createProgram',
+  createprogramUrl: 'http://192.168.200.73:3001/api/com.attra.rrp.program.createProgram',
 
   ldapUrl: 'http://192.168.200.73:3001/auth/ldap',
   walletUrl: 'http://192.168.200.73:3001/api/wallet/import',

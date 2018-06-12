@@ -54,7 +54,7 @@ export class AddProgramComponent implements OnInit {
             console.log("Add Program successCode ", successCode);
             // this.backToCreateArticle();
             if (successCode === 200 || successCode === 201) {
-              this.router.navigate(['/home/program']);
+             
             }
             //  	
     
