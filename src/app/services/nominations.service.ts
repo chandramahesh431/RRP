@@ -1,5 +1,3 @@
-
-
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers, URLSearchParams, RequestOptions, Request, XHRBackend } from '@angular/http';
 import { Observable } from 'rxjs';
@@ -51,7 +49,6 @@ export class NominationsService {
         .catch(this.handleError);
     
   }
-
 
 
 

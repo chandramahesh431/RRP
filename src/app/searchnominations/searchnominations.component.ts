@@ -6,13 +6,13 @@ import { Observable } from 'rxjs';
 import { Router } from '@angular/router'
 
 
-import {Nominations} from '../../services/nominations'
+import {Nominations} from '../services/nominations'
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 import 'zone.js';
 //import 'reflect-metadata';
 import 'rxjs/add/operator/combineLatest';
-import { NominationsService } from '../../services/nominations.service';
+import { NominationsService } from '../services/nominations.service';
 
 @Component({
   selector: 'app-searchnominations',

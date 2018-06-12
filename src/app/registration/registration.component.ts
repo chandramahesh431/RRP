@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginService } from '../../services/login.service';
+import { LoginService } from '../services/login.service';
 import { Http, Response, Headers, URLSearchParams, RequestOptions, Request, XHRBackend } from '@angular/http';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router'
@@ -9,8 +9,8 @@ import 'zone.js';
 import 'rxjs/add/operator/map';
 import { ErrorStateMatcher } from '@angular/material';
 import 'rxjs/add/operator/combineLatest';
-import { Registration } from './registration';
-import { environment } from '../../../environments/environment';
+import { Registration } from '../registration/registration';
+import { environment } from '../../environments/environment';
 
 
 @Component({

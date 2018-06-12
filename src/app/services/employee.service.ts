@@ -11,7 +11,7 @@ import 'rxjs/add/observable/throw';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/map';
 
-import { environment } from '../../../environments/environment';
+import { environment } from '../../environments/environment';
 @Injectable()
 export class EmployeeService {
 

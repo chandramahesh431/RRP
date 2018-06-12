@@ -10,7 +10,7 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/map';
-import { environment } from '../../../environments/environment';
+import { environment } from '../../environments/environment';
 import{ProgramDuration} from '../services/programduration';
 import {ProgramMonth} from '../services/programmonth';
 

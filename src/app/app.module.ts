@@ -11,15 +11,14 @@ import { CommonModule } from '@angular/common';
 
 import { AppRoutingModule } from './routes';
 import { AppComponent } from './app.component';
-import {EmployeeComponent} from '../app/employee/employee/employee.component'
+import {EmployeeComponent} from '../app/employee/employee.component'
 import { AppMaterialModule } from './model/app.material.module';
-import { BlockchainpageComponent } from './blockchainpage/blockchainpage/blockchainpage.component';
-import { HomeComponent } from './home/home/home.component';
-import { LoginComponent } from './login/login/login.component';
-import { RegistrationModule } from './registration/registration.module';
-import { RegistrationComponent } from './registration/registration/registration.component';
-import { ProgramComponent } from './program/program/program.component';
-import { CreateprogramComponent } from './program/createprogram/createprogram.component';
+import { BlockchainpageComponent } from './blockchainpage/blockchainpage.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { ProgramComponent } from './program/program.component';
+import { CreateprogramComponent } from './createprogram/createprogram.component';
 import { LoginService } from './services/login.service';
 
 

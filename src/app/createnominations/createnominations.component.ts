@@ -4,14 +4,14 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Http, Response, Headers, URLSearchParams, RequestOptions, Request, XHRBackend } from '@angular/http';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router'
-import { Nominations } from '../../services/nominations'
+import { Nominations } from '../services/nominations'
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 import 'zone.js';
 
 import { ErrorStateMatcher } from '@angular/material';
 import 'rxjs/add/operator/combineLatest';
-import { NominationsService } from '../../services/nominations.service';
+import { NominationsService } from '../services/nominations.service';
 
 
 

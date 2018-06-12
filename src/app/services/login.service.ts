@@ -4,7 +4,7 @@ import { Http, Response, Headers, URLSearchParams, RequestOptions, Request, XHRB
 import { Observable } from 'rxjs';
 import { map, filter, catchError, mergeMap } from 'rxjs/operators';
 import { Router } from '@angular/router'
-import { Login } from '../login/login/login';
+import { Login } from '../login/login';
 import 'rxjs/Rx';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';

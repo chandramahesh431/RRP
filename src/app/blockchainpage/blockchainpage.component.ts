@@ -4,7 +4,7 @@ import { Router, ActivatedRoute, NavigationExtras } from '@angular/router';
 import { HttpHeaders } from '@angular/common/http';
 import { Http, RequestOptions, Headers } from '@angular/http';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { AppMaterialModule } from '../../model/app.material.module';
+import { AppMaterialModule } from '../model/app.material.module';
 import 'rxjs/add/operator/map';
 
 
