@@ -13,10 +13,12 @@ import 'rxjs/add/operator/map';
 import { environment } from '../../environments/environment';
 import{ProgramDuration} from '../services/programduration';
 import {ProgramMonth} from '../services/programmonth';
+import { LoginService } from './login.service';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class ProgramService {
   createprogramUrl:string;
   constructor(private router: Router, private http: Http) {
@@ -56,6 +58,7 @@ return[
 
   createPrograms(programs:Programs): Observable<number> {
     let cpHeaders = new Headers({ 'Content-Type': 'application/json' });
+    cpHeaders.append("X-Access-Token",LoginService.data);
     let options = new RequestOptions({ headers: cpHeaders });
 
 
